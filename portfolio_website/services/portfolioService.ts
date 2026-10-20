@@ -100,14 +100,14 @@ export interface PortfolioData {
 export const portfolioData: PortfolioData = {
   personal: {
     name: "Harini",
-    fullName: "Harini S",
+    fullName: "Harini Sri",
     tagline: "MBA Candidate (Class of 2026-27)",
     subheading: "Aspiring Business Strategist & Management Consultant",
     bio: "First-year MBA student passionate about unraveling complex business problems through structured problem-solving, data-backed market intelligence, and cross-functional leadership. Eager to create sustainable business impact across Corporate Strategy, Product Growth, and Consulting.",
     email: "hariniharinisri021@gmail.com",
     githubUsername: "hariniharinisri021",
     githubUrl: "https://github.com/hariniharinisri021",
-    linkedinUrl: "https://www.linkedin.com/in/hariniharinisri021",
+    linkedinUrl: "https://www.linkedin.com/in/harini-sri-aa6a70294",
     location: "India (Open to Global / Hybrid Opportunities)",
     availabilityBadge: "Open to Summer 2026 Consulting & Strategy Internships",
     profileImage: "/profile.jpg",
