@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { portfolioData } from '@/data/portfolioData';
+import { portfolioService } from '@/services/portfolioService';
 import {
   Mail,
   Copy,
@@ -15,7 +15,7 @@ import {
 import { LinkedInIcon, GitHubIcon } from './SocialIcons';
 
 export default function ContactSection() {
-  const { personal } = portfolioData;
+  const personal = portfolioService.getPersonal();
   const [copied, setCopied] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({

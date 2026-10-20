@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { portfolioData, Project } from '@/data/portfolioData';
+import { portfolioService, Project } from '@/services/portfolioService';
 import {
   FolderGit2,
   TrendingUp,
@@ -17,16 +17,12 @@ import {
 } from 'lucide-react';
 
 export default function CaseStudiesSection() {
-  const { projects, caseStudyVisual } = portfolioData;
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const categories = ['All', 'Strategy', 'Marketing', 'Finance', 'Operations'];
-
-  const filteredProjects =
-    activeCategory === 'All'
-      ? projects
-      : projects.filter((p) => p.category === activeCategory);
+  const caseStudyVisual = portfolioService.getVisualBanner();
+  const filteredProjects = portfolioService.getProjects(activeCategory);
 
   return (
     <section className="py-20 md:py-28 relative" id="projects">

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { portfolioData } from '@/data/portfolioData';
+import { portfolioService } from '@/services/portfolioService';
 import { X, Printer, Download, Mail, MapPin, Globe, CheckCircle2 } from 'lucide-react';
 import { LinkedInIcon } from './SocialIcons';
 
@@ -13,7 +13,7 @@ interface ResumeModalProps {
 export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
   if (!isOpen) return null;
 
-  const { personal, education, skills, projects, achievements, leadershipRoles } = portfolioData;
+  const { personal, education, skills, projects, achievements, leadershipRoles } = portfolioService.getAll();
 
   const handlePrint = () => {
     window.print();

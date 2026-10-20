@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { portfolioData } from '@/data/portfolioData';
+import { portfolioService } from '@/services/portfolioService';
 import {
   ArrowRight,
   FileText,
@@ -21,7 +21,8 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ onOpenResume }: HeroSectionProps) {
-  const { personal, quickStats } = portfolioData;
+  const personal = portfolioService.getPersonal();
+  const quickStats = portfolioService.getQuickStats();
 
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden" id="about">

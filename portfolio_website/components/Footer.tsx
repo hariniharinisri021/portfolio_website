@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import { portfolioData } from '@/data/portfolioData';
+import { portfolioService } from '@/services/portfolioService';
 import { ArrowUp, Sparkles } from 'lucide-react';
 
 export default function Footer() {
-  const { personal } = portfolioData;
+  const personal = portfolioService.getPersonal();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

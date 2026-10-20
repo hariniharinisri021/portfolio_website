@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { portfolioData } from '@/data/portfolioData';
+import { portfolioService } from '@/services/portfolioService';
 import { Menu, X, FileText, ArrowRight, Sparkles } from 'lucide-react';
 
 interface NavbarProps {
@@ -49,7 +49,7 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-lg font-bold tracking-tight text-white group-hover:text-indigo-300 transition-colors">
-                  {portfolioData.personal.name}
+                  {portfolioService.getPersonal().name}
                 </span>
                 <span className="px-2 py-0.5 text-[10px] font-semibold tracking-wider uppercase rounded-full bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">
                   MBA

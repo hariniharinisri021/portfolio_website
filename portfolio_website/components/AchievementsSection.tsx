@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { portfolioData, Achievement } from '@/data/portfolioData';
+import { portfolioService, Achievement } from '@/services/portfolioService';
 import {
   Trophy,
   Award,
@@ -15,7 +15,9 @@ import {
 } from 'lucide-react';
 
 export default function AchievementsSection() {
-  const { achievements, education, leadershipRoles } = portfolioData;
+  const achievements = portfolioService.getAchievements();
+  const education = portfolioService.getEducation();
+  const leadershipRoles = portfolioService.getLeadershipRoles();
   const [activeTab, setActiveTab] = useState<'honors' | 'education' | 'leadership'>('honors');
 
   return (

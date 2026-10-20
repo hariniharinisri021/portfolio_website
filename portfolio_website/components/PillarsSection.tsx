@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { portfolioData } from '@/data/portfolioData';
+import { portfolioService } from '@/services/portfolioService';
 import { Compass, TrendingUp, Target, Users, ArrowUpRight, Sparkles } from 'lucide-react';
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -12,7 +12,7 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 export default function PillarsSection() {
-  const { executivePillars } = portfolioData;
+  const executivePillars = portfolioService.getPillars();
 
   return (
     <section className="py-20 md:py-28 relative" id="pillars">

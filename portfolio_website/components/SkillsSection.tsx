@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { portfolioData, SkillCategory } from '@/data/portfolioData';
+import { portfolioService, SkillCategory } from '@/services/portfolioService';
 import {
   Layers,
   BarChart3,
@@ -20,7 +20,7 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 export default function SkillsSection() {
-  const { skills } = portfolioData;
+  const skills = portfolioService.getSkills();
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredCategories = skills.map((category) => ({
