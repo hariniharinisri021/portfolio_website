@@ -110,7 +110,7 @@ export const portfolioData: PortfolioData = {
     linkedinUrl: "https://www.linkedin.com/in/harini-sri-aa6a70294",
     location: "India (Open to Global / Hybrid Opportunities)",
     availabilityBadge: "Open to Summer 2026 Consulting & Strategy Internships",
-    profileImage: "/profile.jpg",
+    profileImage: "/harini_profile.jpg",
   },
 
   quickStats: [

@@ -33,10 +33,10 @@ export const metadata: Metadata = {
       "Showcasing strategic case studies, business analytics, achievements, and leadership in MBA.",
     images: [
       {
-        url: "/profile.jpg",
+        url: "/harini_profile.jpg",
         width: 1000,
         height: 1000,
-        alt: "Harini - MBA Candidate",
+        alt: "Harini Sri - MBA Candidate",
       },
     ],
     type: "website",
